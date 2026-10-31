@@ -1,0 +1,4 @@
+Model,Brier_Score,Mean_Predicted_Risk,Actual_Prevalence,ROC_AUC
+Unweighted XGBoost (Raw),0.0908,0.2675,0.0186,0.6729
+Weighted XGBoost (Raw),0.2193,0.4472,0.0186,0.6814
+Bayes-Adjusted for Natural Base Rate (1.96%),0.0181,0.0184,0.0186,0.6729

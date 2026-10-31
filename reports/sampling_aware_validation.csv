@@ -1,0 +1,4 @@
+Cohort,Sample_Size,Positive_Count,Churn_Prevalence,ROC_AUC,PR_AUC,Precision (tau=0.5),Recall (tau=0.5),F1_Score (tau=0.5)
+Full Combined Test Set,14210,4122,29.01%,0.6786,0.4586,0.4042,0.6373,0.4947
+calibrat == 1 (Balanced Cohort),7918,4005,50.58%,0.6776,0.6667,0.6291,0.6357,0.6324
+calibrat == 0 (Natural Holdout),6292,117,1.86%,0.6814,0.048,0.033,0.6923,0.0631

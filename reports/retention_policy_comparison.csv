@@ -1,0 +1,6 @@
+policy_name,description,threshold_rule,n_targeted,tp,fp,churners_saved,cost,gross_benefit,net_savings,roi_pct
+Policy 1: Do Nothing (Baseline),"No retention campaigns; zero cost, zero saved churners",None,0,0,0,0.0,0.0,0.0,0.0,0.0
+Policy 2: Blind Blanket Campaign,Target 100% of customers uniformly with $30 incentive,tau >= 0.00,14210,4122,10088,1030.5,426300.0,257625.0,-168675.0,-39.6
+Policy 3: High Risk Tier Only,Target top risk cohort (pred prob >= 0.60),tau >= 0.60,2814,1365,1449,341.2,84420.0,85312.0,892.0,1.1
+Policy 4: Optimal Net Profit Cutoff,Target economically optimal threshold (tau >= 0.67),tau >= 0.67,1174,680,494,170.0,35220.0,42500.0,7280.0,20.7
+Policy 5: Differentiated Tiered Strategy,High Risk: $35 hardware voucher (r=30%); Med Risk: $4 automated digital SMS (r=15%); Low Risk: $0,"High >= 0.60, Med [0.35, 0.60), Low < 0.35",10998,3713,7285,761.7,131226.0,190425.0,59199.0,45.1

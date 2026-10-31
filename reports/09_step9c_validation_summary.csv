@@ -1,0 +1,10 @@
+Item,Task,Status,Details
+Task 1,Model Performance Metrics,PASS,"Verified against reports/final_test_evaluation.csv: ROC-AUC=0.6786, PR-AUC=0.4586, Acc=0.6223, Prec=0.4042, Rec=0.6373, F1=0.4947"
+Task 2,Confusion Matrices (0.50 vs 0.4631),PASS,"tau=0.50: [TN=6216, FP=3872, FN=1495, TP=2627, Rec=63.73%]. tau*=0.4631: [TN=5256, FP=4832, FN=1122, TP=3000, Rec=72.78%, +373 Churners Saved]"
+Task 3,Individual vs Bulk Prediction Consistency,PASS,Tested 5 instances: Max absolute probability difference = 0.00000000e+00 (Exact match to 10^-6)
+Task 4,"Persona Evaluation (#606, #13293, #452)",PASS,"Verified all 3 tiers: High=85.36% (High Risk), Med=47.69% (Medium Risk), Low=10.92% (Low Risk)"
+Task 5,50-Row Raw CSV Ingestion & Export,PASS,"Processed 50 raw records with 66 cols -> 63 features. Mean prob=38.44%, High Risk=5, Export verified."
+Task 6,Calibrated & Prior-Adjusted Modes,PASS,"Persona #606: Decision=85.36%, Calibrated(Isotonic)=89.62%, Prior-Adjusted(1.96%)=22.21%. Baseline mapping exact (29.01% -> 1.962%)."
+Task 7,SHAP Additivity & Retention Playbook,PASS,"SHAP reconstructed model prob exactly (0.8536 == 0.8536). Primary churn drivers (+): ['cost_per_mou', 'mou']. Recommendation playbook validated."
+Task 8,Robustness & Edge-Case Guardrails,PASS,"Passed: 1) Automatic median/mode imputation on NaNs, 2) Automatic stripping of target/ID columns, 3) Dynamic reconstruction of dropblk."
+Task 9,Model Artifact Integrity & Checksums,PASS,Zero model artifacts modified on disk. Exact MD5 checksums and byte counts verified for all 4 models.

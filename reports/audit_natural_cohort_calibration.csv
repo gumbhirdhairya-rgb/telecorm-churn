@@ -1,0 +1,4 @@
+Model,Mean_Prob,True_Prev,Brier_Score,Brier_Baseline,Brier_Skill_Score_%,Calib_Intercept (alpha),Calib_Slope (beta),ROC_AUC,PR_AUC
+Weighted XGBoost (Raw),0.4472,0.0186,0.2193,0.0182,-1101.72,-3.926,1.076,0.6814,0.048
+Unweighted XGBoost (Raw),0.2675,0.0186,0.0908,0.0182,-397.41,-3.056,1.002,0.6729,0.0504
+Bayes Prior-Adjusted (1.86%),0.0184,0.0186,0.0181,0.0182,0.96,-0.221,0.94,0.6729,0.0504

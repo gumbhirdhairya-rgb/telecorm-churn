@@ -1,0 +1,5 @@
+Model,Mean_Prob,True_Prev,Brier_Score,Brier_Baseline,Brier_Skill_Score_%,Calib_Intercept (alpha),Calib_Slope (beta),ROC_AUC,PR_AUC
+Weighted XGBoost (Champion),0.4725,0.2901,0.223,0.2059,-8.28,-0.858,1.062,0.6786,0.4586
+Unweighted XGBoost,0.2901,0.2901,0.1887,0.2059,8.37,0.041,1.05,0.6804,0.4578
+Calibrated XGBoost (Isotonic),0.29,0.2901,0.1882,0.2059,8.61,0.004,1.004,0.6816,0.4615
+Calibrated XGBoost (Sigmoid/Platt),0.2901,0.2901,0.1883,0.2059,8.55,0.034,1.041,0.6818,0.4617

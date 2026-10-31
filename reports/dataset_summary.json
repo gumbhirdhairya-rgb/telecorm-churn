@@ -1,0 +1,176 @@
+{
+    "dataset_name": "Cell2Cell Telecom Customer Churn",
+    "total_records": 71047,
+    "total_columns": 70,
+    "duplicate_rows": 0,
+    "target_variable": "churn",
+    "class_distribution": {
+        "retained_0": 50438,
+        "retained_pct": 70.99244162315087,
+        "churned_1": 20609,
+        "churned_pct": 29.00755837684913,
+        "imbalance_ratio": "2.45:1"
+    },
+    "calibration_notes": {
+        "calibrat_column_present": true,
+        "calibrat_1_balanced_subsample": 40000,
+        "calibrat_0_evaluation_sample": 31047,
+        "churndep_missing_count": 31047,
+        "recommendation": "Use 'churn' as the true ground truth label across all 71,047 rows. Drop 'calibrat' and 'churndep' prior to model training to prevent data leakage."
+    },
+    "taxonomy": {
+        "Demographic Details": [
+            "age1",
+            "age2",
+            "children",
+            "credita",
+            "creditaa",
+            "prizmrur",
+            "prizmub",
+            "prizmtwn",
+            "ownrent",
+            "marryun",
+            "marryyes",
+            "income",
+            "incmiss",
+            "occprof",
+            "occcler",
+            "occcrft",
+            "occstud",
+            "occhmkr",
+            "occret",
+            "occself"
+        ],
+        "Usage Patterns": [
+            "mou",
+            "overage",
+            "roam",
+            "changem",
+            "dropvce",
+            "blckvce",
+            "unansvce",
+            "custcare",
+            "threeway",
+            "mourec",
+            "outcalls",
+            "incalls",
+            "peakvce",
+            "opeakvce",
+            "dropblk",
+            "callfwdv",
+            "callwait"
+        ],
+        "Billing Information": [
+            "revenue",
+            "recchrge",
+            "directas",
+            "changer",
+            "months",
+            "uniqsubs",
+            "actvsubs",
+            "phones",
+            "models",
+            "eqpdays",
+            "setprcm",
+            "setprc",
+            "refurb",
+            "webcap"
+        ],
+        "Service Feedback & Retention": [
+            "retcalls",
+            "retaccpt",
+            "retcall",
+            "refer"
+        ],
+        "Lifestyle & Behavioral Attributes": [
+            "mailord",
+            "mailres",
+            "mailflag",
+            "travel",
+            "pcown",
+            "creditcd",
+            "newcelly",
+            "newcelln",
+            "mcycle",
+            "truck",
+            "rv"
+        ],
+        "Metadata / Administrative": [
+            "customer",
+            "calibrat",
+            "churndep"
+        ]
+    },
+    "features_with_missing": [
+        {
+            "feature": "churndep",
+            "missing_count": 31047,
+            "percentage": 43.699
+        },
+        {
+            "feature": "age1",
+            "missing_count": 1244,
+            "percentage": 1.751
+        },
+        {
+            "feature": "age2",
+            "missing_count": 1244,
+            "percentage": 1.751
+        },
+        {
+            "feature": "changer",
+            "missing_count": 502,
+            "percentage": 0.707
+        },
+        {
+            "feature": "changem",
+            "missing_count": 502,
+            "percentage": 0.707
+        },
+        {
+            "feature": "revenue",
+            "missing_count": 216,
+            "percentage": 0.304
+        },
+        {
+            "feature": "roam",
+            "missing_count": 216,
+            "percentage": 0.304
+        },
+        {
+            "feature": "overage",
+            "missing_count": 216,
+            "percentage": 0.304
+        },
+        {
+            "feature": "recchrge",
+            "missing_count": 216,
+            "percentage": 0.304
+        },
+        {
+            "feature": "mou",
+            "missing_count": 216,
+            "percentage": 0.304
+        },
+        {
+            "feature": "directas",
+            "missing_count": 216,
+            "percentage": 0.304
+        },
+        {
+            "feature": "models",
+            "missing_count": 1,
+            "percentage": 0.001
+        },
+        {
+            "feature": "eqpdays",
+            "missing_count": 1,
+            "percentage": 0.001
+        },
+        {
+            "feature": "phones",
+            "missing_count": 1,
+            "percentage": 0.001
+        }
+    ]
+}
