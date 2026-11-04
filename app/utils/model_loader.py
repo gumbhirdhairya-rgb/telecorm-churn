@@ -12,6 +12,7 @@ from app.config import (
     PATH_PREPROCESSOR,
     PATH_ISOTONIC_MODEL,
     PATH_SIGMOID_MODEL,
+    PATH_UNWEIGHTED_MODEL,
     PATH_SELECTED_FEATURES,
     MODELS_DIR
 )
@@ -38,8 +39,7 @@ def load_models_and_preprocessor():
     iso_model = joblib.load(PATH_ISOTONIC_MODEL) if PATH_ISOTONIC_MODEL.exists() else None
     sig_model = joblib.load(PATH_SIGMOID_MODEL) if PATH_SIGMOID_MODEL.exists() else None
 
-    unw_path = MODELS_DIR / "unweighted_xgboost.joblib"
-    unw_model = joblib.load(unw_path) if unw_path.exists() else None
+    unw_model = joblib.load(PATH_UNWEIGHTED_MODEL) if PATH_UNWEIGHTED_MODEL.exists() else None
 
     # Load selected features schema
     with open(PATH_SELECTED_FEATURES, "r") as f:

@@ -12,11 +12,13 @@ MODELS_DIR = BASE_DIR / "models"
 REPORTS_DIR = BASE_DIR / "reports"
 FIGURES_DIR = REPORTS_DIR / "figures"
 
-# Artifact Paths
-PATH_XGB_MODEL = MODELS_DIR / "best_xgboost.joblib"
-PATH_PREPROCESSOR = MODELS_DIR / "final_preprocessor.joblib"
-PATH_ISOTONIC_MODEL = MODELS_DIR / "calibrated_xgboost_isotonic.joblib"
-PATH_SIGMOID_MODEL = MODELS_DIR / "calibrated_xgboost_sigmoid.joblib"
+# Artifact Paths (Production Cell2Cell Models with safe backward-compatible fallback)
+PROD_CELL2CELL_DIR = MODELS_DIR / "production_cell2cell"
+PATH_XGB_MODEL = (PROD_CELL2CELL_DIR / "best_xgboost.joblib") if (PROD_CELL2CELL_DIR / "best_xgboost.joblib").exists() else (MODELS_DIR / "best_xgboost.joblib")
+PATH_PREPROCESSOR = (PROD_CELL2CELL_DIR / "final_preprocessor.joblib") if (PROD_CELL2CELL_DIR / "final_preprocessor.joblib").exists() else (MODELS_DIR / "final_preprocessor.joblib")
+PATH_ISOTONIC_MODEL = (PROD_CELL2CELL_DIR / "calibrated_xgboost_isotonic.joblib") if (PROD_CELL2CELL_DIR / "calibrated_xgboost_isotonic.joblib").exists() else (MODELS_DIR / "calibrated_xgboost_isotonic.joblib")
+PATH_SIGMOID_MODEL = (PROD_CELL2CELL_DIR / "calibrated_xgboost_sigmoid.joblib") if (PROD_CELL2CELL_DIR / "calibrated_xgboost_sigmoid.joblib").exists() else (MODELS_DIR / "calibrated_xgboost_sigmoid.joblib")
+PATH_UNWEIGHTED_MODEL = (PROD_CELL2CELL_DIR / "unweighted_xgboost.joblib") if (PROD_CELL2CELL_DIR / "unweighted_xgboost.joblib").exists() else (MODELS_DIR / "unweighted_xgboost.joblib")
 PATH_SELECTED_FEATURES = DATA_DIR / "processed" / "selected_features.json"
 
 # CSV Data Paths
