@@ -51,3 +51,7 @@ scratch/
 
 # Duplicate raw files in root
 cell2cell (2).csv
+
+# CatBoost temporary logs
+catboost_info/
+
